@@ -1,4 +1,4 @@
-from spiretf/docker-tf2-server
+from tashvelocity/docker-tf2-server
 maintainer Robin Appelman <robin@icewind.nl>
 
 ADD ./socket_3.0.1.zip ./ExtendHumiliation.smx /
@@ -10,7 +10,7 @@ RUN $SERVER/maps.sh \
 
 EXPOSE 27015/udp 27015/tcp 27021/tcp 27020/udp
 
-WORKDIR /home/$USER/hlserver
+WORKDIR $SERVER
 
 ENTRYPOINT ["./tf.sh"]
 CMD ["+sv_pure", "1", "+mapcycle", "mapcycle_quickplay_payload.txt", "+map", "cp_badlands", "+maxplayers", "24"]

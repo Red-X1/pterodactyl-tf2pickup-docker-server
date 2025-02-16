@@ -24,3 +24,5 @@ logstf_apikey "${LOGS_TF_APIKEY}"
 sm_demostf_apikey "${DEMOS_TF_APIKEY}"
 
 recordstv_path "demos"
+
+mp_match_end_at_timelimit 0

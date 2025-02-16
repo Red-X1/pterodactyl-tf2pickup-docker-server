@@ -1,4 +1,4 @@
-## Team Fortress 2 + Competitive + Docker
+## Team Fortress 2 + Competitive + Docker for Pterodactyl
 
 Docker image for a competitive tf2 server setup for use with the [pterodactyl](https://pterodactyl.io/) game server management panel.
 

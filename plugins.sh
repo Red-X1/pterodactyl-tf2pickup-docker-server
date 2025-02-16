@@ -10,14 +10,14 @@ rm steamworks.tar.gz
 
 # SOAP-DM
 wget -nv "https://github.com/sapphonie/SOAP-TF2DM/archive/master.zip" -O "soap-dm.zip"
-unzip -o soap-dm.zip
+unzip -o- -qq soap-dm.zip
 cp -r SOAP-TF2DM-master/* ./
 rm -r SOAP-TF2DM-master
 rm soap-dm.zip
 
 # Improved-Match-Timer
 wget -nv "https://github.com/b4nnyBot/Progressive-Ruleset-Timer-Plugins/archive/master.zip" -O "improved-match-timer.zip"
-unzip -o improved-match-timer.zip
+unzip -o -qq improved-match-timer.zip
 cp -r Progressive-Ruleset-Timer-Plugins-main/* ./
 rm -r Progressive-Ruleset-Timer-Plugins-main
 rm improved-match-timer.zip
@@ -25,13 +25,13 @@ rm improved-match-timer.zip
 # Socket
 
 cp /socket_3.0.1.zip socket.zip
-unzip -o socket.zip
+unzip -o -qq socket.zip
 rm socket.zip
 
 # tf2-comp-fixes
 
 wget -nv https://github.com/ldesgoui/tf2-comp-fixes/releases/download/v1.16.13/tf2-comp-fixes.zip
-unzip -o tf2-comp-fixes.zip
+unzip -o -qq tf2-comp-fixes.zip
 rm tf2-comp-fixes.zip
 
 # srctvplus
@@ -44,13 +44,13 @@ wget -nv https://github.com/dalegaard/srctvplus/releases/download/v3.0/srctvplus
 cd $HOME/tf/addons/sourcemod
 
 wget -nv "https://github.com/sapphonie/SM-neocurl-ext/releases/download/v2.0.0-beta/sm-neocurl.zip"
-unzip -o sm-neocurl.zip
+unzip -o -qq sm-neocurl.zip
 rm sm-neocurl.zip
 
 # Websockets
 
 wget -nv "https://github.com/peace-maker/sm-websocket/archive/master.zip" -O "sm-websocket.zip"
-unzip -o sm-websocket.zip
+unzip -o -qq sm-websocket.zip
 cp -r sm-websocket-master/* ./
 rm -r sm-websocket-master
 rm sm-websocket.zip
@@ -59,7 +59,7 @@ rm sm-websocket.zip
 cd $HOME/tf/addons/sourcemod/plugins
 
 wget -nv  --header="Accept: text/html" --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0" "http://sourcemod.krus.dk/f2-sourcemod-plugins.zip"
-unzip -o f2-sourcemod-plugins.zip
+unzip -o -qq f2-sourcemod-plugins.zip
 rm f2-sourcemod-plugins.zip
 
 # WebRCON
@@ -107,6 +107,6 @@ printf "\nsm plugins load properpregame\n" >> $HOME/tf/cfg/sourcemod/soap_notliv
 cd $HOME/tf
 
 wget -nv https://github.com/l-Aad-l/updated-pause-plugin/releases/download/v1.4.2/updated-pause-plugin.zip
-unzip -o updated-pause-plugin.zip
+unzip -o -qq updated-pause-plugin.zip
 rm updated-pause-plugin.zip
 

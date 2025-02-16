@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd $HOME/hlserver/tf2/tf
+cd $HOME/tf
 
 # SteamWorks
 wget -nv "https://github.com/KyleSanderson/SteamWorks/releases/download/1.2.3c/package-lin.tgz" -O "steamworks.tar.gz"
@@ -35,13 +35,13 @@ unzip -o tf2-comp-fixes.zip
 rm tf2-comp-fixes.zip
 
 # srctvplus
-cd $HOME/hlserver/tf2/tf/addons
+cd $HOME/tf/addons
 
 wget -nv https://github.com/dalegaard/srctvplus/releases/download/v3.0/srctvplus.vdf
 wget -nv https://github.com/dalegaard/srctvplus/releases/download/v3.0/srctvplus.so
 
 # Curl
-cd $HOME/hlserver/tf2/tf/addons/sourcemod
+cd $HOME/tf/addons/sourcemod
 
 wget -nv "https://github.com/sapphonie/SM-neocurl-ext/releases/download/v2.0.0-beta/sm-neocurl.zip"
 unzip -o sm-neocurl.zip
@@ -56,7 +56,7 @@ rm -r sm-websocket-master
 rm sm-websocket.zip
 
 # Medic stats, SupStats, LogsTF, RecordSTV, WaitForStv, AFK, RestoreScore, FixStvSlot and Updater
-cd $HOME/hlserver/tf2/tf/addons/sourcemod/plugins
+cd $HOME/tf/addons/sourcemod/plugins
 
 wget -nv  --header="Accept: text/html" --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0" "http://sourcemod.krus.dk/f2-sourcemod-plugins.zip"
 unzip -o f2-sourcemod-plugins.zip
@@ -101,10 +101,10 @@ cp /ExtendHumiliation.smx .
 
 chmod 0664 *.smx
 
-printf "\nsm plugins unload properpregame\n" >> $HOME/hlserver/tf2/tf/cfg/sourcemod/soap_live.cfg
-printf "\nsm plugins load properpregame\n" >> $HOME/hlserver/tf2/tf/cfg/sourcemod/soap_notlive.cfg
+printf "\nsm plugins unload properpregame\n" >> $HOME/tf/cfg/sourcemod/soap_live.cfg
+printf "\nsm plugins load properpregame\n" >> $HOME/tf/cfg/sourcemod/soap_notlive.cfg
 
-cd $HOME/hlserver/tf2/tf
+cd $HOME/tf
 
 wget -nv https://github.com/l-Aad-l/updated-pause-plugin/releases/download/v1.4.2/updated-pause-plugin.zip
 unzip -o updated-pause-plugin.zip

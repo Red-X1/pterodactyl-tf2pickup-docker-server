@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd $HOME/hlserver/tf2/tf/maps
+cd $HOME/tf/maps
 
 maps=()
 

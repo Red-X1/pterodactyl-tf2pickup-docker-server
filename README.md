@@ -12,7 +12,7 @@ Once your server is installed, navigate to /home/container/tf/cfg/ and edit the 
 
 You may also want to configure the autoexec plugin settings to match your preferred mode and league from the defaults:
 ```
-sm_autoexec_league "ugc"
+sm_autoexec_league "etf2l"
 sm_autoexec_mode "9v9"
 ```
 

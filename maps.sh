@@ -6,5 +6,5 @@ cd $HOME/tf/maps
 maps=()
 
 for map in ${maps[@]}; do
-	wget -nv "http://fakkelbrigade.eu/maps/$map.bsp"
+	wget -N -nv "http://fakkelbrigade.eu/maps/$map.bsp"
 done

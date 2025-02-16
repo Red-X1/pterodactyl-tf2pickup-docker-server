@@ -7,7 +7,7 @@ cd $HOME/tf/cfg
 cp -n /server.cfg.template ./server.cfg
 
 #create empty map cycle to stop map rotation
-touch mapcycle.txt
+cp -n /mapcycle.txt ./mapcycle.txt
 
 ugc_cfg_version_9=$(wget -q -O - "https://www.ugcleague.com/files_tf2h.cfm" | grep -oP "UGC_HL_cfg_(.*)\.zip" | grep -m1 -oP "v\d{6,8}")
 ugc_cfg_version_6=$(wget -q -O - "https://www.ugcleague.com/files_tf26.cfm" | grep -oP "UGC_6v6_cfg_(.*)\.zip" | grep -m1 -oP "v\d{6,8}")

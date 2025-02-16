@@ -11,8 +11,10 @@ ghcr.io/tashvelocity/docker-comp-server:master
 Once your server is installed, navigate to /home/container/tf/cfg/ and edit the server.cfg file to setup the various plugins (logs.tf, demos.tf, etc.).
 
 You may also want to configure the autoexec plugin settings to match your preferred mode and league from the defaults:
+```
 sm_autoexec_league "ugc"
 sm_autoexec_mode "9v9"
+```
 
 The server image comes with the etf2l and ugc configs and a set of usefull sourcemod plugins
 

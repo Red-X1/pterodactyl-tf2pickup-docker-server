@@ -65,10 +65,10 @@ else
     echo -e "Not updating game server as auto update was set to 0. Starting Server"
 fi
 
-/home/container/maps.sh
-/home/container/sourcemod.sh
-/home/container/plugins.sh
-/home/container/configs.sh
+#/home/container/maps.sh
+#/home/container/sourcemod.sh
+#/home/container/plugins.sh
+#/home/container/configs.sh
 
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.

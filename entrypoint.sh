@@ -65,6 +65,8 @@ else
     echo -e "Not updating game server as auto update was set to 0. Starting Server"
 fi
 
+cd /
+
 ls -l
 
 cd /home/container/
@@ -75,10 +77,10 @@ cd /home/container/tf
 
 ls -l
 
-bash ./maps.sh
-bash ./sourcemod.sh
-bash ./plugins.sh
-bash ./configs.sh
+bash /maps.sh
+bash /sourcemod.sh
+bash /plugins.sh
+bash /configs.sh
 
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.

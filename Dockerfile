@@ -39,8 +39,7 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-ADD ./socket_3.0.1.zip ./ExtendHumiliation.smx /
-ADD ./maps.sh ./sourcemod.sh ./plugins.sh ./configs.sh ./clean.sh $HOME/
+ADD ./socket_3.0.1.zip ./ExtendHumiliation.smx ./maps.sh ./sourcemod.sh ./plugins.sh ./configs.sh /
 
 COPY        ./entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]

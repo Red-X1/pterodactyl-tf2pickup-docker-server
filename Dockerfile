@@ -19,13 +19,8 @@
 	ENV         HOME /home/container
 	WORKDIR     /home/container
 	
+	ADD ./socket_3.0.1.zip ./ExtendHumiliation.smx /
+	ADD ./maps.sh ./sourcemod.sh ./plugins.sh ./configs.sh ./clean.sh $HOME/
+
 	COPY        ./entrypoint.sh /entrypoint.sh
 	CMD         ["/bin/bash", "/entrypoint.sh"]
-
-ADD ./socket_3.0.1.zip ./ExtendHumiliation.smx /
-ADD ./maps.sh ./sourcemod.sh ./plugins.sh ./configs.sh ./clean.sh $HOME/
-RUN $HOME/clean.sh \
-    && $HOME/maps.sh \
-	&& $HOME/sourcemod.sh \
-	&& $HOME/plugins.sh \
-	&& $HOME/configs.sh

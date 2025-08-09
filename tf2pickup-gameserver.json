@@ -1,0 +1,150 @@
+{
+    "_comment": "The ultimate Egg for the tf2pickup-org image, with full server.cfg configuration via environment variables.",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2025-08-08T21:00:00+00:00",
+    "name": "TF2Pickup.org Official (Full Config)",
+    "author": "community@tf2pickup.org",
+    "description": "TF2 сервер на основе официального образа ghcr.io/tf2pickup-org/tf2-gameserver. Этот Egg позволяет полностью настраивать server.cfg через переменные в панели.",
+    "features": null,
+    "docker_images": {
+        "ghcr.io/tf2pickup-org/tf2-gameserver:latest": "Official TF2Pickup.org Server"
+    },
+    "file_denylist": [],
+    "startup": "+map {{STARTUP_MAP}} +maxplayers {{MAX_PLAYERS}}",
+    "config": {
+        "user": "tf2",
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"gameserver Steam ID\"\r\n}",
+        "logs": "{}",
+        "stop": "quit"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/bash\r\n# Installation is not required as a pre-built Docker image is used.",
+            "container": "alpine:3.16",
+            "entrypoint": "sh"
+        }
+    },
+    "variables": [
+        {
+            "name": "Server Hostname",
+            "description": "Имя сервера, которое будет отображаться в браузере серверов и в шаблоне server.cfg.",
+            "env_variable": "HOSTNAME",
+            "default_value": "TF2Pickup.org Server",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:100"
+        },
+        {
+            "name": "RCON Password",
+            "description": "Пароль для RCON. Необходим для корректной остановки сервера и для шаблона server.cfg.",
+            "env_variable": "RCON_PASSWORD",
+            "default_value": "changeme",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|between:8,32"
+        },
+        {
+            "name": "Server Password",
+            "description": "Пароль для подключения к серверу (sv_password). Оставьте пустым для публичного сервера.",
+            "env_variable": "PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:32"
+        },
+        {
+            "name": "Server Tags",
+            "description": "Теги сервера через запятую для браузера серверов (например, alltalk,nocrits).",
+            "env_variable": "TAGS",
+            "default_value": "tf2pickup,alltalk",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255"
+        },
+        {
+            "name": "Mapcycle File",
+            "description": "Имя файла с циклом карт (например, mapcycle_default.txt).",
+            "env_variable": "MAPCYCLE_FILE",
+            "default_value": "mapcycle_default.txt",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|ends_with:.txt"
+        },
+        {
+            "name": "Startup Map",
+            "description": "Карта, которая будет передана в entrypoint.sh для запуска.",
+            "env_variable": "STARTUP_MAP",
+            "default_value": "koth_product_rcx",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:50"
+        },
+        {
+            "name": "Max Players",
+            "description": "Максимальное количество игроков, передаваемое в entrypoint.sh.",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "16",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric|between:1,32"
+        },
+        {
+            "name": "Server Token (GSLT)",
+            "description": "Токен игрового сервера Steam (GSLT). Обязателен для entrypoint.sh.",
+            "env_variable": "SERVER_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|alpha_num|size:32"
+        },
+        {
+            "name": "Team Size",
+            "description": "Размер команды для режима pickup.",
+            "env_variable": "TEAM_SIZE",
+            "default_value": "6",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric|between:1,12"
+        },
+        {
+            "name": "Pickup API Address",
+            "description": "Адрес API для коннектора tf2pickup.org.",
+            "env_variable": "TF2PICKUPORG_API_ADDRESS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255"
+        },
+        {
+            "name": "Pickup API Secret",
+            "description": "Секретный ключ для API tf2pickup.org.",
+            "env_variable": "TF2PICKUPORG_SECRET",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255"
+        },
+        {
+            "name": "logs.tf API Key",
+            "description": "Ваш API ключ с сайта logs.tf для автоматической загрузки логов.",
+            "env_variable": "LOGS_TF_APIKEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|alpha_num|max:64"
+        },
+        {
+            "name": "demos.tf API Key",
+            "description": "Ваш API ключ с сайта demos.tf для автоматической загрузки демок.",
+            "env_variable": "DEMOS_TF_APIKEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|alpha_num|max:64"
+        }
+    ]
+}

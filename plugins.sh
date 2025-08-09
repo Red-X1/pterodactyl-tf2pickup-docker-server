@@ -98,9 +98,6 @@ wget -N -nv https://github.com/demostf/plugin/raw/ba1b642b92585af142a885af7159fa
 # autoexec
 wget -N -nv https://github.com/spiretf/autoexec/raw/master/plugin/autoexec.smx
 
-## Pause
-wget -N -nv https://github.com/spiretf/docker-comp-server/raw/master/pause.smx
-
 ## SdrConnect
 wget -N -nv https://github.com/spiretf/sdrconnect/raw/main/plugin/sdrconnect.smx
 
@@ -119,7 +116,7 @@ chmod 0664 *.smx
 
 cd $HOME/tf
 
-wget -N -nv https://github.com/l-Aad-l/updated-pause-plugin/releases/download/v1.4.2/updated-pause-plugin.zip
+wget -N -nv https://github.com/l-Aad-l/updated-pause-plugin/releases/download/v1.6.2/updated-pause-plugin.zip
 unzip -o -qq updated-pause-plugin.zip
 rm updated-pause-plugin.zip
 

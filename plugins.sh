@@ -4,11 +4,13 @@ set -e
 cd $HOME/tf
 
 # SteamWorks
+
 wget -N -nv "https://github.com/KyleSanderson/SteamWorks/releases/download/1.2.3c/package-lin.tgz" -O "steamworks.tar.gz"
 tar -xf steamworks.tar.gz --strip-components 1
 rm steamworks.tar.gz
 
 # SOAP-DM
+
 wget -N -nv "https://github.com/sapphonie/SOAP-TF2DM/archive/master.zip" -O "soap-dm.zip"
 unzip -o- -qq soap-dm.zip
 cp -r SOAP-TF2DM-master/* ./
@@ -16,6 +18,7 @@ rm -r SOAP-TF2DM-master
 rm soap-dm.zip
 
 # Improved-Match-Timer
+
 wget -N -nv "https://github.com/b4nnyBot/Progressive-Ruleset-Timer-Plugins/archive/master.zip" -O "improved-match-timer.zip"
 unzip -o -qq improved-match-timer.zip
 cp -r Progressive-Ruleset-Timer-Plugins-main/* ./
@@ -34,18 +37,44 @@ wget -N -nv https://github.com/ldesgoui/tf2-comp-fixes/releases/download/v1.16.1
 unzip -o -qq tf2-comp-fixes.zip
 rm tf2-comp-fixes.zip
 
+# RGL-server-resources-updater
+
+wget -N -nv https://github.com/RGLgg/server-resources-updater/releases/download/v345/server-resources-updater.zip
+unzip -o -qq server-resources-updater.zip
+rm server-resources-updater.zip
+
 # srctvplus
+
 cd $HOME/tf/addons
 
 wget -N -nv https://github.com/dalegaard/srctvplus/releases/download/v3.0/srctvplus.vdf
 wget -N -nv https://github.com/dalegaard/srctvplus/releases/download/v3.0/srctvplus.so
 
 # Curl
+
 cd $HOME/tf/addons/sourcemod
 
 wget -N -nv "https://github.com/sapphonie/SM-neocurl-ext/releases/download/v2.0.0-beta/sm-neocurl.zip"
 unzip -o -qq sm-neocurl.zip
 rm sm-neocurl.zip
+
+# STAC anticheat
+
+wget -N -nv "https://github.com/sapphonie/StAC-tf2/releases/download/v6.3.7/stac.zip"
+unzip -o -qq stac.zip
+rm stac.zip
+
+# tf2rue
+
+wget -N -nv "https://github.com/sapphonie/tf2rue/releases/download/v0.0.12/tf2rue.zip"
+unzip -o -qq tf2rue.zip
+rm tf2rue.zip
+
+# System2
+
+wget -N -nv "https://github.com/dordnung/System2/releases/download/v3.3.2/system2.zip"
+unzip -o -qq system2.zip
+rm system2.zip
 
 # Websockets
 
@@ -58,7 +87,7 @@ rm sm-websocket.zip
 # Medic stats, SupStats, LogsTF, RecordSTV, WaitForStv, AFK, RestoreScore, FixStvSlot and Updater
 cd $HOME/tf/addons/sourcemod/plugins
 
-wget -N -nv  --header="Accept: text/html" --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0" "http://sourcemod.krus.dk/f2-sourcemod-plugins.zip"
+wget -N -nv "https://sourcemod.krus.dk/f2-sourcemod-plugins.zip"
 unzip -o -qq f2-sourcemod-plugins.zip
 rm f2-sourcemod-plugins.zip
 
@@ -80,12 +109,6 @@ wget -N -nv https://github.com/spiretf/autoexec/raw/master/plugin/autoexec.smx
 ## Pause
 wget -N -nv https://github.com/spiretf/docker-comp-server/raw/master/pause.smx
 
-## NoCheats
-wget -N -nv https://github.com/spiretf/nocheats/raw/master/plugin/nocheats.smx
-
-## NoChat
-wget -N -nv https://github.com/spiretf/nochat/raw/main/plugin/nochat.smx
-
 ## SdrConnect
 wget -N -nv https://github.com/spiretf/sdrconnect/raw/main/plugin/sdrconnect.smx
 
@@ -94,6 +117,14 @@ wget -N -nv https://github.com/spiretf/setteam/raw/master/plugin/setteam.smx
 
 # proper-pregame
 wget -N -nv https://github.com/AJagger/ProperPregame/raw/master/addons/sourcemod/plugins/properpregame.smx
+
+# stadium-sm-plugin
+
+wget -N -nv https://github.com/tf2pickup-org/stadium-sm-plugin/raw/master/teams.smx
+
+# connector
+
+wget -N -nv https://github.com/tf2pickup-org/connector/releases/download/0.6.1/connector.smx
 
 # ExtendHumiliation
 

@@ -9,14 +9,6 @@ wget -N -nv "https://github.com/KyleSanderson/SteamWorks/releases/download/1.2.3
 tar -xf steamworks.tar.gz --strip-components 1
 rm steamworks.tar.gz
 
-# SOAP-DM
-
-wget -N -nv "https://github.com/sapphonie/SOAP-TF2DM/archive/master.zip" -O "soap-dm.zip"
-unzip -o- -qq soap-dm.zip
-cp -r SOAP-TF2DM-master/* ./
-rm -r SOAP-TF2DM-master
-rm soap-dm.zip
-
 # Improved-Match-Timer
 
 wget -N -nv "https://github.com/b4nnyBot/Progressive-Ruleset-Timer-Plugins/archive/master.zip" -O "improved-match-timer.zip"
@@ -115,9 +107,6 @@ wget -N -nv https://github.com/spiretf/sdrconnect/raw/main/plugin/sdrconnect.smx
 ## SetTeam
 wget -N -nv https://github.com/spiretf/setteam/raw/master/plugin/setteam.smx
 
-# proper-pregame
-wget -N -nv https://github.com/AJagger/ProperPregame/raw/master/addons/sourcemod/plugins/properpregame.smx
-
 # stadium-sm-plugin
 
 wget -N -nv https://github.com/tf2pickup-org/stadium-sm-plugin/raw/master/teams.smx
@@ -126,14 +115,7 @@ wget -N -nv https://github.com/tf2pickup-org/stadium-sm-plugin/raw/master/teams.
 
 wget -N -nv https://github.com/tf2pickup-org/connector/releases/download/0.6.1/connector.smx
 
-# ExtendHumiliation
-
-cp /ExtendHumiliation.smx .
-
 chmod 0664 *.smx
-
-printf "\nsm plugins unload properpregame\n" >> $HOME/tf/cfg/sourcemod/soap_live.cfg
-printf "\nsm plugins load properpregame\n" >> $HOME/tf/cfg/sourcemod/soap_notlive.cfg
 
 cd $HOME/tf
 

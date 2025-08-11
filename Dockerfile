@@ -32,7 +32,7 @@ ENV         DEBIAN_FRONTEND=noninteractive
 RUN         dpkg --add-architecture i386 \
 				&& apt-get update \
 				&& apt-get upgrade -y \
-				&& apt install -y tar curl gcc g++ lib32gcc-s1 libgcc1 libcurl4-gnutls-dev:i386 libssl3:i386 libcurl4:i386 lib32tinfo6 libtinfo6:i386 lib32z1 lib32stdc++6 libncurses6:i386 libsdl2-2.0-0:i386 iproute2 gdb libfontconfig1 telnet net-tools netcat-traditional tzdata \
+				&& apt install -y tar curl gcc g++ lib32gcc-s1 libgcc1 libcurl4-gnutls-dev:i386 libssl3:i386 libcurl4:i386 lib32tinfo6 libtinfo6:i386 lib32z1 lib32stdc++6 libncurses6:i386 libsdl2-2.0-0:i386 iproute2 gdb libfontconfig1 telnet net-tools netcat-traditional tzdata bzip2 unzip vim nano wget \
 				&& useradd -m -d /home/container container
 
 USER        container

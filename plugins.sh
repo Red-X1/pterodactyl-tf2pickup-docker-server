@@ -17,12 +17,6 @@ cp -r Progressive-Ruleset-Timer-Plugins-main/* ./
 rm -r Progressive-Ruleset-Timer-Plugins-main
 rm improved-match-timer.zip
 
-# Socket
-
-cp /socket_3.0.1.zip socket.zip
-unzip -o -qq socket.zip
-rm socket.zip
-
 # tf2-comp-fixes
 
 wget -N -nv https://github.com/ldesgoui/tf2-comp-fixes/releases/download/v1.16.13/tf2-comp-fixes.zip

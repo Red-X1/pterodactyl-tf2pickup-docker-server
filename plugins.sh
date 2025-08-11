@@ -62,18 +62,10 @@ wget -N -nv "https://github.com/dordnung/System2/releases/download/v3.3.2/system
 unzip -o -qq system2.zip
 rm system2.zip
 
-# Websockets
-
-wget -N -nv "https://github.com/peace-maker/sm-websocket/archive/master.zip" -O "sm-websocket.zip"
-unzip -o -qq sm-websocket.zip
-cp -r sm-websocket-master/* ./
-rm -r sm-websocket-master
-rm sm-websocket.zip
-
 # Medic stats, SupStats, LogsTF, RecordSTV, WaitForStv, AFK, RestoreScore, FixStvSlot and Updater
 cd $HOME/tf/addons/sourcemod/plugins
 
-wget -N -nv "https://sourcemod.krus.dk/f2-sourcemod-plugins.zip"
+wget -N -nv "https://github.com/F2/F2s-sourcemod-plugins/releases/download/20250728-1753698992295/f2-sourcemod-plugins.zip"
 unzip -o -qq f2-sourcemod-plugins.zip
 rm f2-sourcemod-plugins.zip
 

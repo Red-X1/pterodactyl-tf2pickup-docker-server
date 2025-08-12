@@ -29,6 +29,12 @@ wget -N -nv https://github.com/RGLgg/server-resources-updater/releases/download/
 unzip -o -qq server-resources-updater.zip
 rm server-resources-updater.zip
 
+# MGE
+
+wget -N -nv https://github.com/sapphonie/MGEMod/releases/download/v3.0.9/mge.zip
+unzip -o -qq mge.zip
+rm mge.zip
+
 # srctvplus
 
 cd $HOME/tf/addons

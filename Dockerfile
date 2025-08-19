@@ -40,7 +40,7 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 # ВНИМАНИЕ: Убедитесь, что эти файлы существуют в папке, где вы запускаете 'docker build'
-ADD ./mapcycle.txt ./server.cfg.template ./maps.sh ./sourcemod.sh ./plugins.sh ./configs.sh /
+ADD ./mapcycle.txt ./server.cfg.template ./maps.sh ./sourcemod.sh ./plugins.sh ./configs.sh ./clean.sh /
 
 COPY        ./entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]

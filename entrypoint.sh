@@ -69,6 +69,7 @@ bash /maps.sh
 bash /sourcemod.sh
 bash /plugins.sh
 bash /configs.sh
+bash /clean.sh
 
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.
